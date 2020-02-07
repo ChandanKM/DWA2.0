@@ -1,26 +1,88 @@
-<ngb-tabset>
-    <ngb-tab title="Simple">
-      <ng-template ngbTabContent>
-        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-        master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
-        dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
-        iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-      </ng-template>
-    </ngb-tab>
-    <ngb-tab>
-      <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
-      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
-        craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
-        cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-        yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
-        shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
-        sint qui sapiente accusamus tattooed echo park.</p>
-      </ng-template>
-    </ngb-tab>
-    <ngb-tab title="Disabled" [disabled]="true">
-      <ng-template ngbTabContent>
-        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
-      </ng-template>
-    </ngb-tab>
-  </ngb-tabset>
+   <div class="dbgOuter">
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgSun" class="dbgCheck" />
+        <label for="dbgSun">S</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgMon" class="dbgCheck" />
+        <label for="dbgMon">M</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgTue" class="dbgCheck" />
+        <label for="dbgTue">T</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgWed"  class="dbgCheck" />
+        <label for="dbgWed">W</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgThur"  class="dbgCheck" />
+        <label for="dbgThur">T</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgFri"  class="dbgCheck" />
+        <label for="dbgFri">F</label>
+    </div>
+    <div class="dbgCont">
+        <input type="checkbox" id="dbgSat"  class="dbgCheck" />
+        <label for="dbgSat">S</label>
+    </div>
+   </div>
+
+
+   <form #addressForm="ngForm" class="container mt-3" (ngSubmit)="logValue()">
+    <div class="row justify-content-center">
+      <div class="col-6">
+          <button type="button" class="btn btn-primary mb-2" (click)="addAddress()">Add Address</button>
+        <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
+          <div class="row">
+            <div class="col-6">
+                <h4>Address {{i + 1}}</h4>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i)">Remove</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.address" name="address_{{i}}" placeholder="St. Thomas Apartment"/>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Street</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.street" name="street_{{i}}" placeholder="South Street"/>
+                  </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.city" name="city_{{i}}" placeholder="Mumbai"/>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Country</label>
+                    <select class="form-control" [(ngModel)]="address.country" name="country_{{i}}" placeholder="India">
+                      <option value="india">India</option>
+                      <option value="usa">USA</option>
+                      <option value="england">England</option>
+                    </select>
+                  </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-right">
+            <input type="submit" class="btn btn-success" value="Submit"/>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
