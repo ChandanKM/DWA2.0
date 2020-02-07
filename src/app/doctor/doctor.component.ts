@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-doctor',
@@ -7,6 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorComponent implements OnInit
 {
+
+  langs: string[] = [
+    'English',
+    'French',
+    'German',
+  ];
+
+  myform: FormGroup;
+  firstName: FormControl; 
+  lastName: FormControl;
+  email: FormControl;
+  password: FormControl;
+  language: FormControl;
+
     public addresses: any[] = [{
     address: '',
     street: '',
@@ -17,24 +32,55 @@ export class DoctorComponent implements OnInit
     constructor() { }
 
     ngOnInit() {
-
+    this.createFormControls();
+    this.createForm();
     }
 
-    addAddress() {
-        this.addresses.push({
-          address: '',
-          street: '',
-          city: '',
-          country: ''
-        });
-      }
+    createFormControls() {
+      this.firstName = new FormControl('', Validators.required);
+      this.lastName = new FormControl('', Validators.required);
+      this.email = new FormControl('', [
+        Validators.required,
+        Validators.pattern("[^ @]*@[^ @]*")
+      ]);
+      this.password = new FormControl('', [
+        Validators.required,
+        Validators.minLength(8)
+      ]);
+      this.language = new FormControl('', Validators.required);
+    }
 
-      removeAddress(i: number) {
-        this.addresses.splice(i, 1);
-      }
+    createForm() {
+      this.myform = new FormGroup({
+        name: new FormGroup({
+          firstName: this.firstName,
+          lastName: this.lastName,
+        }),
+        email: this.email,
+        password: this.password,
+        language: this.language
+      });
+    }
 
-      logValue() {
-        console.log(this.addresses);
-      }
+    // addAddress() {
+    //     this.addresses.push({
+    //       address: '',
+    //       street: '',
+    //       city: '',
+    //       country: ''
+    //     });
+    //   }
+
+      // removeAddress(i: number) {
+      //   this.addresses.splice(i, 1);
+      // }
+
+      // logValue() {
+      //   console.log(this.addresses);
+      // }
+
+      // logForm(value: any) {
+      //   console.log(value);
+      // }
 
 }
