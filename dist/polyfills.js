@@ -1142,7 +1142,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.11' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -10715,7 +10715,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\Angular Templets\Angular temp-20190809T184711Z-001\Angular temp\DWA_Release_2-master\DWA_Release_2-master\DWAv2.0\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! F:\Ruwanda Rentals\Git push code\src\polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

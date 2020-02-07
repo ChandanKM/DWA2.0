@@ -51,7 +51,7 @@ var SearchRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"\" [@routerTransition]>\n\n    <p>\n      SEARCH works!\n    </p>\n</div>"
+module.exports = "\r\n<div class=\"\" [@routerTransition]>\r\n\r\n    <p>\r\n      SEARCH works!\r\n    </p>\r\n</div>"
 
 /***/ }),
 

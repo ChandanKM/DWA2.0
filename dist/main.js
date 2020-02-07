@@ -22,14 +22,11 @@ var map = {
 	],
 	"./dashboard/dashboard.module": [
 		"./src/app/layout/dashboard/dashboard.module.ts",
-		"dashboard-dashboard-module~layout-layout-module~search-search-module~user-management-user-management~f33bc620",
 		"common",
 		"dashboard-dashboard-module"
 	],
 	"./layout/layout.module": [
 		"./src/app/layout/layout.module.ts",
-		"dashboard-dashboard-module~layout-layout-module~search-search-module~user-management-user-management~f33bc620",
-		"common",
 		"layout-layout-module"
 	],
 	"./login/login.module": [
@@ -43,7 +40,6 @@ var map = {
 	],
 	"./search/search.module": [
 		"./src/app/layout/search/search.module.ts",
-		"dashboard-dashboard-module~layout-layout-module~search-search-module~user-management-user-management~f33bc620",
 		"common",
 		"search-search-module"
 	],
@@ -58,7 +54,6 @@ var map = {
 	],
 	"./user-management/user-management.module": [
 		"./src/app/layout/user-management/user-management.module.ts",
-		"dashboard-dashboard-module~layout-layout-module~search-search-module~user-management-user-management~f33bc620",
 		"common",
 		"user-management-user-management-module"
 	]
@@ -139,7 +134,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -216,12 +211,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -248,6 +245,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             imports: [
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModule"].forRoot(),
                 _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
@@ -390,7 +388,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-xl-12\">\n        <h2 class=\"page-header\">\n            {{heading}}\n        </h2>\n        <ol class=\"breadcrumb\">\n            <li class=\"breadcrumb-item\">\n                <i class=\"fa fa-dashboard\"></i> <a href=\"Javascript:void(0)\" [routerLink]=\"['/dashboard']\">Dashboard</a>\n            </li>\n            <li class=\"breadcrumb-item active\"><i class=\"fa {{icon}}\"></i> {{heading}}</li>\n        </ol>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n        <h2 class=\"page-header\">\r\n            {{heading}}\r\n        </h2>\r\n        <ol class=\"breadcrumb\">\r\n            <li class=\"breadcrumb-item\">\r\n                <i class=\"fa fa-dashboard\"></i> <a href=\"Javascript:void(0)\" [routerLink]=\"['/dashboard']\">Dashboard</a>\r\n            </li>\r\n            <li class=\"breadcrumb-item active\"><i class=\"fa {{icon}}\"></i> {{heading}}</li>\r\n        </ol>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -501,7 +499,7 @@ var PageHeaderModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card text-white bg-{{bgClass}}\">\n    <div class=\"card-header\">\n        <div class=\"row\">\n            <div class=\"col col-xs-3\">\n                <i class=\"fa {{icon}} fa-5x\"></i>\n            </div>\n            <div class=\"col col-xs-9 text-right\">\n                <div class=\"d-block huge\">{{count}}</div>\n                <div class=\"d-block\">{{label}}</div>\n            </div>\n        </div>\n    </div>\n    <div class=\"card-footer\">\n        <span class=\"float-left\">View Details {{data}}</span>\n        <a href=\"javascript:void(0)\" class=\"float-right card-inverse\">\n            <span ><i class=\"fa fa-arrow-circle-right\"></i></span>\n        </a>\n    </div>\n</div>\n"
+module.exports = "<div class=\"card text-white bg-{{bgClass}}\">\r\n    <div class=\"card-header\">\r\n        <div class=\"row\">\r\n            <div class=\"col col-xs-3\">\r\n                <i class=\"fa {{icon}} fa-5x\"></i>\r\n            </div>\r\n            <div class=\"col col-xs-9 text-right\">\r\n                <div class=\"d-block huge\">{{count}}</div>\r\n                <div class=\"d-block\">{{label}}</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-footer\">\r\n        <span class=\"float-left\">View Details {{data}}</span>\r\n        <a href=\"javascript:void(0)\" class=\"float-right card-inverse\">\r\n            <span ><i class=\"fa fa-arrow-circle-right\"></i></span>\r\n        </a>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -713,7 +711,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\Angular Templets\Angular temp-20190809T184711Z-001\Angular temp\DWA_Release_2-master\DWA_Release_2-master\DWAv2.0\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! F:\Ruwanda Rentals\Git push code\src\main.ts */"./src/main.ts");
 
 
 /***/ })

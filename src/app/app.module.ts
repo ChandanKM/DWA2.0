@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // AoT requires an exported function for factories
@@ -24,6 +25,7 @@ export const createTranslateLoader = (http: HttpClient) => {
 
 @NgModule({
     imports: [
+        NgbModule.forRoot(),
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,

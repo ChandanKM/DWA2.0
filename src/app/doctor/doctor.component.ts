@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctor.component.scss']
 })
 export class DoctorComponent implements OnInit {
+    constructor() { }
 
-  
-  // comments
-  constructor() { }
+    ngOnInit() {
 
-  ngOnInit() {
-    
-  }
+    }
 
 }
