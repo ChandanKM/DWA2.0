@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-export interface DtoExperience { 
+export class DtoExperience { 
     experId?: number;
     organization?: number;
     designation?: number;

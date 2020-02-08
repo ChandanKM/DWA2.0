@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-export interface DtoBankInfo { 
+export class DtoBankInfo { 
     bankName?: string;
     bankCode?: string;
     accountName?: string;

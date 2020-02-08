@@ -16,7 +16,7 @@ import { DtoExperience } from './dtoExperience';
 import { DtoFeesAndTiming } from './dtoFeesAndTiming';
 import { DtoOtherInformation } from './dtoOtherInformation';
 
-export interface DtoDoctor { 
+export class DtoDoctor { 
     title?: string;
     name?: string;
     type?: string;
@@ -39,3 +39,7 @@ export interface DtoDoctor {
     dtoExperienceDetails?: Array<DtoExperience>;
     dtoOtherInformation?: Array<DtoOtherInformation>;
 }
+
+
+//create the formcontrol object here 
+//so that we can add the validation using the forms control object.

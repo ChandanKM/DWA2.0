@@ -4,6 +4,8 @@ import { DoctorRoutingModule } from './/doctor-routing.module';
 import { DoctorComponent } from './doctor.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DoctorService } from '../api/api';
+import { StatModule } from '../shared';
 
 @NgModule({
   imports: [
@@ -11,10 +13,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DoctorRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StatModule
   ],
   exports: [DoctorComponent],
   declarations: [DoctorComponent],
+  providers: [DoctorService],
   bootstrap: [DoctorComponent]
 })
 export class DoctorModule { }

@@ -13,7 +13,7 @@ const routes: Routes = [
             { path: 'search', loadChildren: './search/search.module#SearchModule' },
             { path: 'user-management', loadChildren: './user-management/user-management.module#UserManagementModule' },
             { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
-            { path: 'doctor', loadChildren: './../doctor/doctor.module#DoctorModule' }
+            { path: 'doctor', redirectTo: './../doctor/doctor.module#DoctorModule' }
         ]
     }
 ];

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-export interface DtoFeesAndTiming { 
+export class DtoFeesAndTiming { 
     hospitalName?: string;
     specialization?: string;
     myProperty?: string;

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-export interface DtoContactDetails { 
+export class DtoContactDetails { 
     contactId?: number;
     line1?: string;
     line2?: string;

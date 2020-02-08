@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-export interface DtoEducationalDetails { 
+export class DtoEducationalDetails { 
     educationalId?: number;
     qualification?: string;
     college?: string;
