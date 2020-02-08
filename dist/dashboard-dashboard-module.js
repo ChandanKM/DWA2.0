@@ -50,7 +50,7 @@ var DashboardRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"\" [@routerTransition]>\r\n\r\n    <p>\r\n      Dashboard works!\r\n    </p>\r\n</div>"
+module.exports = "\n<div class=\"\" [@routerTransition]>\n  <div class=\"form-group\">\n    <label>First Name</label>\n    <input type=\"text\"\n           class=\"form-control\">\n  </div>\n</div>"
 
 /***/ }),
 

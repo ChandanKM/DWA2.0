@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DoctorRoutingModule } from './/doctor-routing.module';
+import { DoctorRoutingModule } from './doctor-routing.module';
 import { DoctorComponent } from './doctor.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DoctorService } from '../api/api';
-import { StatModule } from '../shared';
+import { FormsModule } from '@angular/forms';
+import { DoctorService } from '../../api/api';
+import { StatModule } from '../../shared';
 
 @NgModule({
   imports: [
@@ -13,7 +13,6 @@ import { StatModule } from '../shared';
     DoctorRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule,
     StatModule
   ],
   exports: [DoctorComponent],

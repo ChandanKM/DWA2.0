@@ -50,7 +50,7 @@ var UserManagementRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div [@routerTransition]>\r\n\r\n<p>\r\n  user-management works!\r\n</p>\r\n</div>"
+module.exports = "\n<div [@routerTransition]>\n\n<p>\n  user-management works!\n</p>\n</div>"
 
 /***/ }),
 

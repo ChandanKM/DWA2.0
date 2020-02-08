@@ -16,9 +16,14 @@ import { DtoExperience } from './dtoExperience';
 import { DtoFeesAndTiming } from './dtoFeesAndTiming';
 import { DtoOtherInformation } from './dtoOtherInformation';
 
-export class DtoDoctor { 
-    title?: string;
-    name?: string;
+export class DtoDoctor {
+    constructor(public title: string,
+        public name: string,)
+    {
+    
+    } 
+    // title?: string;
+    // name?: string;
     type?: string;
     specialization?: string;
     myProperty?: number;

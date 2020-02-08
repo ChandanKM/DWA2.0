@@ -1,4 +1,4 @@
-import { DoctorRoutingModule } from './doctor-routing.module';
+import { DoctorRoutingModule } from "./doctor-routing.module";
 
 describe('DoctorRoutingModule', () => {
   let doctorRoutingModule: DoctorRoutingModule;
