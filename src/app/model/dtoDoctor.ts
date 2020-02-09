@@ -17,8 +17,8 @@ import { DtoFeesAndTiming } from './dtoFeesAndTiming';
 import { DtoOtherInformation } from './dtoOtherInformation';
 
 export class DtoDoctor {
-    constructor(public title: string,
-        public name: string,)
+    constructor(public title?: string,
+        public name?: string,)
     {
     
     } 

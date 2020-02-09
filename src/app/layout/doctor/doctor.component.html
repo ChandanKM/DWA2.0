@@ -1,44 +1,543 @@
-<div class="jumbotron">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-8 offset-md-2">
-              <h3>Angular 6 Template-Driven Form Validation</h3>
-              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-                  <div class="form-group">
-                      <label for="firstName">First Name</label>
-                      <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
-                      <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
-                          <div *ngIf="firstName.errors.required">First Name is required</div>
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate> 
+              <ngb-tabset [destroyOnHide]="false">
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Primary</b></ng-template>
+                  <ng-template ngbTabContent>
+                    
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-md-2 form-group">
+                            <label for="firstName">Title</label>
+                              <input type="text" class="form-control" name="title" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }">
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="firstName">Name</label>
+                              <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                              <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                                  <div *ngIf="firstName.errors.required">First Name is required</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Type</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Specialization</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Registration</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">International Board</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Registered Year</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Experience</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Country</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Email</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-1 form-group">
+                            <label for="firstName">Ext</label>
+                              <input type="text" class="form-control" name="title" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }">
+                          </div>
+                          <div class="form-group col-md-3">
+                            <label for="firstName">Mobile</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">DOB</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Gender</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="lastName">Last Name</label>
-                      <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
-                      <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
-                          <div *ngIf="lastName.errors.required">Last Name is required</div>
+                  
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Contact</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <section>
+                       <div class="col-md-12">
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <label for="lastName">Line 1</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="lastName">Line 2</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <label for="lastName">City</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="lastName">Landmark</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="form-group col-md-4">
+                              <label for="lastName">Postal Code</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="lastName">District</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+                          </div>
+                       </div> 
+			            </section>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Education</b>
+                  <ng-template ngbTabContent>
+                    <section>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="form-group col-md-3">
+                            <label for="lastName">Qualification *</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="lastName">College *</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-3">
+                            <label for="lastName">Pass out year *</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-3 glyphicon-custom-btn">
+                            <a href="#">
+                              <span class="glyphicon glyphicon-plus btn btn-success btn-md">+</span>
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
-                      <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-                          <div *ngIf="email.errors.required">Email is required</div>
-                          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                    </section>
+                  </ng-template>
+                </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Experience</b>
+                    <ng-template ngbTabContent>
+                      <section>
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="form-group col-md-3">
+                              <label for="lastName">Organization *</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+      
+                            <div class="form-group col-md-3">
+                              <label for="lastName">Designation *</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+                            
+                            <div class="form-group col-md-3">
+                              <label for="lastName">From Date *</label>
+                              <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                  <div *ngIf="lastName.errors.required">Last Name is required</div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label for="lastName">Current</label>
+                              <input type="checkbox" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            </div>
+                            <div class="form-group col-md-1 glyphicon-custom-btn">
+                              <a href="#">
+                                <span class="glyphicon glyphicon-plus btn btn-success btn-md">+</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </ng-template>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Fees & Timing</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <section>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Hospital *</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+    
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Specialization *</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-1 glyphicon-custom-btn">
+                            <a href="#">
+                              <span class="glyphicon glyphicon-plus btn btn-success btn-md">+</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">First Consultation</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+
+                          </div>
+                          <div class="col-md-6">
+                            <div class="row">
+                              <div class="form-group col-md-4">
+                                <label for="lastName">From Time *</label>
+                                <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                                <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                    <div *ngIf="lastName.errors.required">Last Name is required</div>
+                                </div>
+                              </div>
+        
+                              <div class="form-group col-md-4">
+                                <label for="lastName">To Time *</label>
+                                <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                                <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                    <div *ngIf="lastName.errors.required">Last Name is required</div>
+                                </div>
+                              </div>
+                              <div class="form-group col-md-1 glyphicon-custom-btn">
+                                <a href="#">
+                                  <span class="glyphicon glyphicon-plus btn btn-success btn-md">+</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Second Consultation</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Report Showing</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
-                      <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-                          <div *ngIf="password.errors.required">Password is required</div>
-                          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </section>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Bank info</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <section>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Bank Name</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Bank Code</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Account Name</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Branch Name</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Account number</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Branch Email</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">IFSC Code</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">MICR Code</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required">Last Name is required</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Notification on settlement voucher</label>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Switch</label>
+                          </div>
+                        </div>
                       </div>
+                    </section>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Other Details</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <section>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Speciality</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Expertise</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Research awards</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col-md-4">
+                            <label for="lastName">Others</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>Confirmation details</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <h2>
+                      <span class="step-icon"><i class="zmdi zmdi-check"></i></span>
+                      <span class="step-text">Confirm Details</span>
+                    </h2>
+                    <section>
+                        <div class="inner">
+                  <div class="form-row table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr class="space-row">
+                          <th>Full Name:</th>
+                          <td id="fullname-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Email Address:</th>
+                          <td id="email-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Phone Number:</th>
+                          <td id="phone-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Address Location:</th>
+                          <td id="address-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Gender:</th>
+                          <td id="gender-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Account Name:</th>
+                          <td id="account-name-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Account Number:</th>
+                          <td id="account-number-val"></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="form-group">
-                      <button class="btn btn-primary">Register</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </div>
-</div>
+                </div>
+                    </section>
+                  </ng-template>
+                </ngb-tab>
+              </ngb-tabset>
+            </form>

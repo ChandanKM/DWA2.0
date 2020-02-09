@@ -26,7 +26,7 @@ import { Configuration } from '../configuration';
 @Injectable()
 export class DoctorService {
 
-    protected basePath = '/';
+    protected basePath = 'http://localhost:5500';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
@@ -107,6 +107,7 @@ export class DoctorService {
     public apiDoctorIdDelete(id: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
     public apiDoctorIdDelete(id: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
+        
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling apiDoctorIdDelete.');
         }
@@ -196,18 +197,19 @@ export class DoctorService {
     public apiDoctorPost(body?: DtoDoctor, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
     public apiDoctorPost(body?: DtoDoctor, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
     public apiDoctorPost(body?: DtoDoctor, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
-
         let headers = this.defaultHeaders;
 
         // to determine the Accept header
         const httpHeaderAccepts: string[] = [
+            'default'
         ];
         const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        console.log(httpHeaderAcceptSelected);
         if (httpHeaderAcceptSelected !== undefined) {
             headers = headers.set('Accept', httpHeaderAcceptSelected);
         }
 
+        
         // to determine the Content-Type header
         const consumes: string[] = [
             'application/json',
@@ -215,6 +217,7 @@ export class DoctorService {
             'application/_*+json'
         ];
         const httpContentTypeSelected: string | undefined = this.configuration.selectHeaderContentType(consumes);
+        console.log("Content type",httpContentTypeSelected);
         if (httpContentTypeSelected !== undefined) {
             headers = headers.set('Content-Type', httpContentTypeSelected);
         }
